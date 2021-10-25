@@ -150,6 +150,7 @@ body{
 .content{
     grid-column: 2/-1;
     grid-row: 2/-1;
+    margin-right: 5px;
     box-shadow: -1px -1px 5px var(--secondary-color);
 }
 .content .content-img{
