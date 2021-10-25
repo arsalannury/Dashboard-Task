@@ -6,7 +6,7 @@
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="css/hover-min.css" rel="stylesheet">
+    <link href="./Hover-master/css/hover-min.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/dashboard.css">
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.6/animate.min.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
@@ -16,9 +16,9 @@
     
         <nav class="navbar">
           <div class="userinformation">
-            <i class="fas fa-user-circle user-icon"></i>
+            <i class="fas fa-user-circle user-icon" id="user-icon-id"></i>
               <span class="user-name">User Name</span>
-              <div class="items-navbar">
+              <div class="items-navbar animated pulse">
                   <span class="change-password">Change Password</span>
                   <span class="user-profile">Profile</span>
                   <span class="sign-out">Sign Out</span>
@@ -33,9 +33,9 @@
       <!-- <h2 class="title-dashboard">Dashboard</h2> -->
       <div class="dashboard-section">
           <ul class="item-parent-sidebar">
-             <li class="manager-item">manager section </li>
+             <li class="manager-item" id="manager-id">manager section </li>
           </ul>
-                  <ul class="items-child-sidebar">
+                  <ul class="items-child-sidebar animated rubberBand">
                       <li class="item-child">Users List</li>
                       <li class="item-child">Add User</li>
                       <li class="item-child">Role List</li>
@@ -45,5 +45,6 @@
     <div class="content">
      <img class="content-img" src="./image/image_processing20211021-11399-1urvylb.png" alt="content-logo">
     </div>
+    <script src="./js/dashboard.js"></script>
 </body>
 </html>
