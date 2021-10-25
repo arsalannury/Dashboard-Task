@@ -5,11 +5,50 @@
     box-sizing: border-box;
     font-size: 16px;  /*use EM for font-size , 16PX is root it means 16PX = 1Em */
 }
+:root{
+    --primary-color: #eaeaea;
+    --secondary-color: #2A2C41;
+    --text-color: #7F8AA0;
+    --border-radius: 3px;
+    --button-color: #407BFF;
+}
 body{
     height:100vh;
     font-family: 'Poppins' , sans-serif;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    grid-template-rows: repeat(5,150px);
+    grid-auto-rows: 150px;
+    gap: 10px;
+    overflow-y: hidden;
 }
-
+.navbar{
+    grid-column: 1/-1;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    box-shadow:0 1px 2px var(--secondary-color) ;
+    /* height: 20vh; */
+}
+.userinformation{
+    margin:10px 0 0 10px;
+}
+.userinformation .user-icon{
+    font-size:1.5em;
+}
+.sidebar{
+    grid-column: 1/2;
+    grid-row: 2/-1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    box-shadow:1px 0 2px var(--secondary-color) ;
+}
+.content{
+    grid-column: 2/-1;
+    grid-row: 2/-1;
+}
 .items-navbar{
     display: none;
 }
