@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="./css/bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/fontawesome-free-5.15.4-web/css/fontawesome.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div id="login" class=" px-3">
+        <img id="login__img" class="mt-5 mb-3" src="./assets/img/Login-rafiki 1.svg" alt="login">
+        <h1 id="login__title">Login</h1>
+        <p id="login__description" class="mb-3">Please sign in</p>
+        <form class="text-center">
+            <div class="login__inputIcons">
+                <i class="fas fa-user login__icon"></i>
+                <input type="text" class="login__input form-control my-3" id="login__username" value="" placeholder="username">
+            </div>
+            <div class="login__inputIcons">
+                <i class="fas fa-key login__icon"></i>
+                <input type="password" class="login__input form-control my-3 py-2" id="login__password" value="" placeholder="password">
+                <div id="loginError" class="form-text text-danger"></div>
+            </div>
+            <button type="button" id="login__btn" class="btn p-2 mb-5" onclick="login()">Login</button>
+        </form>
+    </div>
+
+
+    <script src="./js/global.js"></script>
+    <script src="./js/login.js"></script>
+    <script src="./js/bootstrap-js/bootstrap.min.js"></script>
+    <script src="./js/fontawesome-js/all.min.js"></script>
+</body>
+</html>

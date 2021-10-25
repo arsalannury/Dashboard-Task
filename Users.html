@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Users</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./css/fontawesome-free-5.15.4-web/css/fontawesome.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+<body>
+    <div class="container">
+        <div class="row my-5 pt-3">
+            <div class="col-12 d-flex align-items-center justify-content-center ">
+                <h2 class="title">List of Users</h2>
+                <button id="add__User" class="btn" data-toggle="tooltip" title="Add user"
+                        onclick="window.location.href='./AddUser.html'">+<i class="fas fa-user"></i></button>
+
+            </div>
+            <!-- <div id="addBtnDiv" class="col-6 py-2">
+
+            </div> -->
+
+        </div>
+        <section id="users">
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th></th>
+                    <th>UserName</th>
+                    <th>firstName</th>
+                    <th>LastName</th>
+                    <th>NationalCode</th>
+                    <th>BirthDate</th>
+                    <th>City</th>
+                    <th>Mobile</th>
+                    <th>Address</th>
+                    <th>Role</th>
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody id="users__list"></tbody>
+            </table>
+        </section>
+    </div>
+    
+
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
+             data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Change Password</h5>
+                </div>
+                    <div class="row p-3">
+                        <div class="col-12">
+                            <div class="mb-3">
+                                <label for="exampleInputPassword1" class="form-label">Password</label>
+                                <input id="password" type="password" class="form-control" id="exampleInputPassword1">
+                                
+                            </div>
+                            <div class="mb-3">
+                                <label for="repeatPass" class="form-label">Confirm Password</label>
+                                <input id="repeatPass" type="password" class="form-control" id="repeatPass">
+                                <div id="errorChangePass" class="form-text text-danger"></div>
+                                <div id="successChangePass" class="form-text text-success"></div>
+                            </div>
+
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                                <button id="changePass" data-id="" type="button" class="btn btn-primary">Save changes</button>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="staticBackdrop2" data-bs-backdrop="static"
+             data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdrop2Label" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                    <div class="row p-3">
+                        <div class="col-12">
+                            <div class="modal-body">
+                                Are You sure you want to delete this user?
+                            </div>         
+
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                                <button id="deleteUserBtn" delete-id="" type="button" data-bs-dismiss="modal" 
+                                        class="btn btn-primary">Delete</button>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="./js/global.js"></script>
+    <script src="./js/users.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <script src="./js/fontawesome-js/all.min.js"></script>
+</body>
+</html>
+

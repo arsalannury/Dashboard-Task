@@ -1,0 +1,17 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;  /*use EM for font-size , 16PX is root it means 16PX = 1Em */
+}
+body{
+    height:100vh;
+    font-family: 'Poppins' , sans-serif;
+}
+
+.items-navbar{
+    display: none;
+}
+.content-img{
+    width: 30%;
+}
