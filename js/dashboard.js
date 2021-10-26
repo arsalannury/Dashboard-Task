@@ -5,6 +5,7 @@ const managerItem = document.querySelector('.manager-item');
 const signOut = document.querySelector('.sign-out');
 const addUser = document.getElementById('adduser');
 const usersList = document.getElementById('userlist');
+const userName = document.querySelector('.user-name');
 
 // :: :: :: :: :: :: :: ::
 //  navbar menu JS
@@ -57,3 +58,9 @@ usersList.addEventListener('click' , (e) => {
 })
 
 
+
+function i(){
+    let local = localStorage.getItem('userName');
+    userName.innerText = JSON.parse(local)
+}
+i()

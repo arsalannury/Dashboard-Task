@@ -42,6 +42,7 @@ function showUsers() {
 function setDeleteId(uId) {
     var d = document.getElementById("deleteUserBtn");
     d.setAttribute('delete-id' , uId);
+    localStorage.removeItem('userName')
 }
 
 document.getElementById("deleteUserBtn").onclick = function() {
