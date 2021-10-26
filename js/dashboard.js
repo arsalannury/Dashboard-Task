@@ -2,6 +2,9 @@ const userIcon = document.querySelector('.user-icon');
 const itemsNavbar = document.querySelector('.items-navbar');
 const sidebarMenu = document.querySelector('.items-child-sidebar');
 const managerItem = document.querySelector('.manager-item');
+const signOut = document.querySelector('.sign-out');
+const addUser = document.getElementById('adduser');
+const usersList = document.getElementById('userlist');
 
 // :: :: :: :: :: :: :: ::
 //  navbar menu JS
@@ -31,8 +34,6 @@ managerItem.addEventListener('click',(e) => {
     }
     
 })
-
-
 
 // :: :: :: :: :: :: :: ::
 //  Sign Out button
