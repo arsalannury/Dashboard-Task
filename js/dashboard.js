@@ -11,21 +11,19 @@ const userName = document.querySelector('.user-name');
 //  navbar menu JS
 // :: :: :: :: :: :: :: ::
 userIcon.addEventListener('click',(e) => {
+    let dropdown = document.querySelector('.items-navbar');
+    if (dropdown.dataset.active === 'hide') {
 
-    if(userIcon.id === 'navigation_dropdownActive'){
-
-        itemsNavbar.classList.remove('navbar_dropdownHide');
-        itemsNavbar.classList.add('navbar_dropdownActive');
-        userIcon.id = 'navigaiton_dropdown_hide';
-
-    }else if(userIcon.id === 'navigaiton_dropdown_hide'){
-
-        itemsNavbar.classList.remove('navbar_dropdownActive');
-        itemsNavbar.classList.add('navbar_dropdownHide');
-        userIcon.id = 'navigation_dropdownActive';
+        dropdown.classList.add('navbar_dropdownActive');
+        dropdown.dataset.active = 'active';
+        console.log(dropdown)
+    }else {
         
-   }
-
+        dropdown.classList.remove('navbar_dropdownActive');
+        dropdown.dataset.active = 'hide';
+        console.log(dropdown)
+  
+    }
 })
 // :: :: :: :: :: :: :: ::
 //  side bar drop down JS
