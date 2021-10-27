@@ -71,9 +71,33 @@ body {
     width: 10%;
 }
 
-.userinformation .user-icon {
-    font-size: 1.5em;
+.userinformation .user {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-end;
+    border: 1px solid #0005;
+    color: #000b;
+    padding: 1rem;
+    border-radius: .5rem;
+    -webkit-border-radius: .5rem;
+    -moz-border-radius: .5rem;
+    -ms-border-radius: .5rem;
+    -o-border-radius: .5rem;
     cursor: pointer;
+}
+
+.userinformation .user_icon {
+    font-size: var(--size-20);
+    display: block;
+    margin-top: -1rem;
+    margin-right: .5rem;
+}
+
+.userinformation .user_name {
+    white-space: nowrap;
+    display: block;
+    font-size: var(--size-16);
+    margin-bottom: -.2rem;
 }
 
 .userinformation .items-navbar {
