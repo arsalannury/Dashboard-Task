@@ -1,0 +1,1320 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?n9vx0t');
+  src:  url('fonts/icomoon.eot?n9vx0t#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?n9vx0t') format('truetype'),
+    url('fonts/icomoon.woff?n9vx0t') format('woff'),
+    url('fonts/icomoon.svg?n9vx0t#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-zootool:before {
+  content: "\e900";
+}
+.icon-10691308771535698998:before {
+  content: "\e901";
+}
+.icon-18255464571535699000:before {
+  content: "\e902";
+}
+.icon-codepen-svgrepo-com:before {
+  content: "\e903";
+}
+.icon-direct-download:before {
+  content: "\e904";
+}
+.icon-github1:before {
+  content: "\e90a";
+}
+.icon-layers:before {
+  content: "\e90b";
+}
+.icon-linkedin1:before {
+  content: "\e90c";
+}
+.icon-setting:before {
+  content: "\e90d";
+}
+.icon-9gag:before {
+  content: "\e90e";
+}
+.icon-academia-edu:before {
+  content: "\e90f";
+}
+.icon-airbnb:before {
+  content: "\e910";
+}
+.icon-angelist:before {
+  content: "\e911";
+}
+.icon-lastfm:before {
+  content: "\e917";
+}
+.icon-badoo:before {
+  content: "\e918";
+}
+.icon-behance:before {
+  content: "\e919";
+}
+.icon-blackberry:before {
+  content: "\e91a";
+}
+.icon-blogger:before {
+  content: "\e91b";
+}
+.icon-busuu:before {
+  content: "\e91c";
+}
+.icon-codepen:before {
+  content: "\e91d";
+}
+.icon-coderwall:before {
+  content: "\e91e";
+}
+.icon-delicious:before {
+  content: "\e923";
+}
+.icon-devianart:before {
+  content: "\e924";
+}
+.icon-digg:before {
+  content: "\e925";
+}
+.icon-discord:before {
+  content: "\e926";
+}
+.icon-dislike:before {
+  content: "\e929";
+}
+.icon-disqus:before {
+  content: "\e92a";
+}
+.icon-dribbble:before {
+  content: "\e92b";
+}
+.icon-dropbox:before {
+  content: "\e931";
+}
+.icon-envato:before {
+  content: "\e932";
+}
+.icon-evernote:before {
+  content: "\e933";
+}
+.icon-messenger:before {
+  content: "\e934";
+}
+.icon-flickr:before {
+  content: "\e935";
+}
+.icon-forrst:before {
+  content: "\e936";
+}
+.icon-foursquare:before {
+  content: "\e937";
+}
+.icon-gab:before {
+  content: "\e938";
+}
+.icon-git:before {
+  content: "\e93c";
+}
+.icon-github3:before {
+  content: "\e93e";
+}
+.icon-github2:before {
+  content: "\e940";
+}
+.icon-gofundme:before {
+  content: "\e941";
+}
+.icon-goodreads:before {
+  content: "\e942";
+}
+.icon-google-allo:before {
+  content: "\e943";
+}
+.icon-google-drive:before {
+  content: "\e944";
+}
+.icon-google-hangouts:before {
+  content: "\e945";
+}
+.icon-google-hangouts1:before {
+  content: "\e94b";
+}
+.icon-google-photos:before {
+  content: "\e94c";
+}
+.icon-google-play:before {
+  content: "\e94d";
+}
+.icon-google-plus:before {
+  content: "\e94e";
+}
+.icon-google-plus1:before {
+  content: "\e94f";
+}
+.icon-houzz:before {
+  content: "\e950";
+}
+.icon-kakao-talk:before {
+  content: "\e951";
+}
+.icon-kickstarter:before {
+  content: "\e952";
+}
+.icon-kik:before {
+  content: "\e958";
+}
+.icon-klout:before {
+  content: "\e959";
+}
+.icon-lastfm1:before {
+  content: "\e95a";
+}
+.icon-line:before {
+  content: "\e95b";
+}
+.icon-medium:before {
+  content: "\e95c";
+}
+.icon-medium1:before {
+  content: "\e95d";
+}
+.icon-meetme:before {
+  content: "\e95e";
+}
+.icon-meetup:before {
+  content: "\e95f";
+}
+.icon-myspace:before {
+  content: "\e965";
+}
+.icon-odnoklassniki:before {
+  content: "\e966";
+}
+.icon-open-source:before {
+  content: "\e967";
+}
+.icon-path:before {
+  content: "\e968";
+}
+.icon-patreon:before {
+  content: "\e969";
+}
+.icon-periscope:before {
+  content: "\e96a";
+}
+.icon-photobucket:before {
+  content: "\e96b";
+}
+.icon-picasa:before {
+  content: "\e96c";
+}
+.icon-pinboard:before {
+  content: "\e972";
+}
+.icon-pinterest1:before {
+  content: "\e973";
+}
+.icon-pixabay:before {
+  content: "\e974";
+}
+.icon-plurk:before {
+  content: "\e975";
+}
+.icon-plurk1:before {
+  content: "\e976";
+}
+.icon-product-hunt:before {
+  content: "\e977";
+}
+.icon-quora:before {
+  content: "\e978";
+}
+.icon-reddit:before {
+  content: "\e979";
+}
+.icon-revebnation:before {
+  content: "\e982";
+}
+.icon-rss:before {
+  content: "\e983";
+}
+.icon-sina-weibo:before {
+  content: "\e984";
+}
+.icon-skillshare:before {
+  content: "\e985";
+}
+.icon-skype:before {
+  content: "\e986";
+}
+.icon-slack1:before {
+  content: "\e98c";
+}
+.icon-slack:before {
+  content: "\e98d";
+}
+.icon-snapchat:before {
+  content: "\e98e";
+}
+.icon-soundcloud:before {
+  content: "\e98f";
+}
+.icon-spotify:before {
+  content: "\e990";
+}
+.icon-stack-overflow:before {
+  content: "\e991";
+}
+.icon-steam:before {
+  content: "\e992";
+}
+.icon-stumbleupon:before {
+  content: "\e993";
+}
+.icon-swarm:before {
+  content: "\e994";
+}
+.icon-tagged:before {
+  content: "\e995";
+}
+.icon-team-viewer:before {
+  content: "\e996";
+}
+.icon-tinder:before {
+  content: "\e997";
+}
+.icon-trello:before {
+  content: "\e998";
+}
+.icon-tumblr:before {
+  content: "\e999";
+}
+.icon-twitch1:before {
+  content: "\e99a";
+}
+.icon-twoo:before {
+  content: "\e99b";
+}
+.icon-uber:before {
+  content: "\e99c";
+}
+.icon-unspash:before {
+  content: "\e99d";
+}
+.icon-v-live:before {
+  content: "\e99e";
+}
+.icon-viber:before {
+  content: "\e99f";
+}
+.icon-viddler:before {
+  content: "\e9a0";
+}
+.icon-vimeo:before {
+  content: "\e9a1";
+}
+.icon-vine:before {
+  content: "\e9a2";
+}
+.icon-VK:before {
+  content: "\e9a3";
+}
+.icon-wattpad:before {
+  content: "\e9a4";
+}
+.icon-waze:before {
+  content: "\e9a5";
+}
+.icon-wechat:before {
+  content: "\e9a6";
+}
+.icon-whatsapp1:before {
+  content: "\e9a7";
+}
+.icon-wordpress:before {
+  content: "\e9a8";
+}
+.icon-xanga:before {
+  content: "\e9a9";
+}
+.icon-xing:before {
+  content: "\e9aa";
+}
+.icon-yahoo:before {
+  content: "\e9ab";
+}
+.icon-yahoo1:before {
+  content: "\e9ac";
+}
+.icon-yelp:before {
+  content: "\e9ad";
+}
+.icon-youtube:before {
+  content: "\e9ae";
+}
+.icon-delivery-2:before {
+  content: "\e905";
+}
+.icon-home-delivery:before {
+  content: "\e906";
+}
+.icon-cargo-ship:before {
+  content: "\e907";
+}
+.icon-fast-delivery:before {
+  content: "\e908";
+}
+.icon-package-6:before {
+  content: "\e909";
+}
+.icon-offer:before {
+  content: "\e912";
+}
+.icon-box-5:before {
+  content: "\e913";
+}
+.icon-box-4:before {
+  content: "\e914";
+}
+.icon-box-3:before {
+  content: "\e915";
+}
+.icon-box-2:before {
+  content: "\e916";
+}
+.icon-trolley:before {
+  content: "\e91f";
+}
+.icon-a78819:before {
+  content: "\e920";
+}
+.icon-a788191:before {
+  content: "\e921";
+}
+.icon-package-3:before {
+  content: "\e922";
+}
+.icon-location:before {
+  content: "\e927";
+}
+.icon-calculator:before {
+  content: "\e928";
+}
+.icon-delivery-cart:before {
+  content: "\e92c";
+}
+.icon-shopping-cart-2:before {
+  content: "\e92d";
+}
+.icon-shopping-cart-1:before {
+  content: "\e92e";
+}
+.icon-shopping-cart:before {
+  content: "\e92f";
+}
+.icon-shopping:before {
+  content: "\e930";
+}
+.icon-add-point:before {
+  content: "\e939";
+}
+.icon-add-product:before {
+  content: "\e93a";
+}
+.icon-address-1:before {
+  content: "\e93b";
+}
+.icon-address-3:before {
+  content: "\e93d";
+}
+.icon-address-5:before {
+  content: "\e93f";
+}
+.icon-address-12:before {
+  content: "\e946";
+}
+.icon-address-13:before {
+  content: "\e947";
+}
+.icon-address-map:before {
+  content: "\e948";
+}
+.icon-address-map1:before {
+  content: "\e949";
+}
+.icon-add-to-cart:before {
+  content: "\e94a";
+}
+.icon-approved-signal1:before {
+  content: "\e953";
+}
+.icon-arrow-down:before {
+  content: "\e954";
+}
+.icon-arrow-down-bold:before {
+  content: "\e955";
+}
+.icon-arrow-down-double:before {
+  content: "\e956";
+}
+.icon-arrow-left:before {
+  content: "\e957";
+}
+.icon-arrow-up-double:before {
+  content: "\e960";
+}
+.icon-attachment:before {
+  content: "\e961";
+}
+.icon-badge1:before {
+  content: "\e962";
+}
+.icon-bag-money:before {
+  content: "\e963";
+}
+.icon-balance:before {
+  content: "\e964";
+}
+.icon-best-price:before {
+  content: "\e96d";
+}
+.icon-book-and-media:before {
+  content: "\e96e";
+}
+.icon-bookmark_empty:before {
+  content: "\e96f";
+}
+.icon-Brand-Digikala-USPs-Monocolor-7daysreturn:before {
+  content: "\e970";
+}
+.icon-Brand-Digikala-USPs-Monocolor-7x24:before {
+  content: "\e971";
+}
+.icon-cancel-thin:before {
+  content: "\e97a";
+}
+.icon-cart:before {
+  content: "\e97b";
+}
+.icon-cart-header:before {
+  content: "\e97c";
+}
+.icon-cashback:before {
+  content: "\e97d";
+}
+.icon-cash-on-delivery:before {
+  content: "\e97e";
+}
+.icon-category:before {
+  content: "\e97f";
+}
+.icon-category1:before {
+  content: "\e980";
+}
+.icon-category2:before {
+  content: "\e981";
+}
+.icon-checked:before {
+  content: "\e987";
+}
+.icon-check-green:before {
+  content: "\e988";
+}
+.icon-checkmark:before {
+  content: "\e989";
+}
+.icon-check-mark:before {
+  content: "\e98a";
+}
+.icon-checkout:before {
+  content: "\e98b";
+}
+.icon-eye:before {
+  content: "\e9bc";
+}
+.icon-filter-1:before {
+  content: "\e9c6";
+}
+.icon-filter:before {
+  content: "\e9c7";
+}
+.icon-folder1:before {
+  content: "\e9ca";
+}
+.icon-folder-add:before {
+  content: "\e9cb";
+}
+.icon-gift-icon:before {
+  content: "\e9d5";
+}
+.icon-gift-percent:before {
+  content: "\e9d6";
+}
+.icon-gift-shape:before {
+  content: "\e9d7";
+}
+.icon-home-2:before {
+  content: "\e9e9";
+}
+.icon-Icon-Action-AddComment1:before {
+  content: "\e9ed";
+}
+.icon-Icon-Action-Delete1:before {
+  content: "\e9fb";
+}
+.icon-Icon-Action-DeliveryMethod-Suggested1:before {
+  content: "\e9ff";
+}
+.icon-Icon-Action-Done1:before {
+  content: "\ea00";
+}
+.icon-Icon-Action-Doubt1:before {
+  content: "\ea01";
+}
+.icon-Icon-Action-Fav-Off:before {
+  content: "\ea03";
+}
+.icon-Icon-Action-Favorite-Off1:before {
+  content: "\ea05";
+}
+.icon-Icon-Action-Favorite-On1:before {
+  content: "\ea06";
+}
+.icon-Icon-Action-Home-Fill1:before {
+  content: "\ea0c";
+}
+.icon-Icon-Action-Home-Outline1:before {
+  content: "\ea0d";
+}
+.icon-Icon-Action-Profile-Off:before {
+  content: "\ea19";
+}
+.icon-Icon-Action-Profile-On:before {
+  content: "\ea1a";
+}
+.icon-Icon-Action-Serial:before {
+  content: "\ea25";
+}
+.icon-Icon-Action-Setting:before {
+  content: "\ea26";
+}
+.icon-uniE9C9:before {
+  content: "\e9c9";
+}
+.icon-envelope:before {
+  content: "\f003";
+}
+.icon-th_large:before {
+  content: "\f009";
+}
+.icon-ok:before {
+  content: "\f00c";
+}
+.icon-remove:before {
+  content: "\f00d";
+}
+.icon-cog:before {
+  content: "\f013";
+}
+.icon-trash:before {
+  content: "\f014";
+}
+.icon-flag:before {
+  content: "\f024";
+}
+.icon-barcode1:before {
+  content: "\f02a";
+}
+.icon-gift:before {
+  content: "\f06b";
+}
+.icon-leaf:before {
+  content: "\f06c";
+}
+.icon-check_empty:before {
+  content: "\f096";
+}
+.icon-sign_blank:before {
+  content: "\f0c8";
+}
+.icon-instagram1:before {
+  content: "\f16d";
+}
+.icon-_382:before {
+  content: "\f197";
+}
+.icon-uniF2B7:before {
+  content: "\f2b7";
+}
+.icon-uniF2DB:before {
+  content: "\f2db";
+}
+.icon-uniF2DC:before {
+  content: "\f2dc";
+}
+.icon-Icon-Action-AddComment:before {
+  content: "\e016";
+}
+.icon-Icon-Action-AddtoCart:before {
+  content: "\e017";
+}
+.icon-Icon-Action-Ads:before {
+  content: "\e018";
+}
+.icon-Icon-Action-AskQuestion:before {
+  content: "\e019";
+}
+.icon-Icon-Action-Bug:before {
+  content: "\e01a";
+}
+.icon-Icon-Action-Cancel:before {
+  content: "\e01b";
+}
+.icon-Icon-Action-Card-Credit:before {
+  content: "\e01c";
+}
+.icon-Icon-Action-Card-Gift:before {
+  content: "\e01d";
+}
+.icon-Icon-Action-Cart-Off:before {
+  content: "\e01e";
+}
+.icon-Icon-Action-Cart-On:before {
+  content: "\e01f";
+}
+.icon-Icon-Action-Comment:before {
+  content: "\e022";
+}
+.icon-Icon-Action-Delete:before {
+  content: "\e024";
+}
+.icon-Icon-Action-DeliveryMethod-Suggested:before {
+  content: "\e027";
+}
+.icon-Icon-Action-Done:before {
+  content: "\e028";
+}
+.icon-Icon-Action-Doubt:before {
+  content: "\e029";
+}
+.icon-Icon-Action-Fav-On:before {
+  content: "\e02c";
+}
+.icon-Icon-Action-Favorite-Off:before {
+  content: "\e02d";
+}
+.icon-Icon-Action-Favorite-On:before {
+  content: "\e02e";
+}
+.icon-Icon-Action-Feadback:before {
+  content: "\e02f";
+}
+.icon-Icon-Action-Filter:before {
+  content: "\e030";
+}
+.icon-Icon-Action-Flag:before {
+  content: "\e031";
+}
+.icon-Icon-Action-Home-Fill:before {
+  content: "\e034";
+}
+.icon-Icon-Action-Home-Outline:before {
+  content: "\e035";
+}
+.icon-Icon-Action-MovetoCart:before {
+  content: "\e03b";
+}
+.icon-Icon-Action-Question:before {
+  content: "\e043";
+}
+.icon-Icon-Action-Search-History:before {
+  content: "\e056";
+}
+.icon-Icon-Action-Search-History1:before {
+  content: "\e048";
+}
+.icon-Icon-Alert-Info-Outline:before {
+  content: "\e05d";
+}
+.icon-Icon-Badges-Free:before {
+  content: "\e073";
+}
+.icon-Icon-Badges-Gift:before {
+  content: "\e076";
+}
+.icon-Icon-Badges-RecommendedProduct:before {
+  content: "\e083";
+}
+.icon-Icon-Communication-Chat:before {
+  content: "\e0a1";
+}
+.icon-Icon-Location-NewAddress:before {
+  content: "\e0b6";
+}
+.icon-approved-signal:before {
+  content: "\e0df";
+}
+.icon-delete:before {
+  content: "\e125";
+}
+.icon-filled-twitter:before {
+  content: "\e14e";
+}
+.icon-message:before {
+  content: "\e18b";
+}
+.icon-morediscount:before {
+  content: "\e18e";
+}
+.icon-verified-user:before {
+  content: "\e223";
+}
+.icon-your-location:before {
+  content: "\e230";
+}
+.icon-book:before {
+  content: "\e9af";
+}
+.icon-file-empty:before {
+  content: "\e9b0";
+}
+.icon-files-empty:before {
+  content: "\e9b1";
+}
+.icon-file-zip:before {
+  content: "\e9b2";
+}
+.icon-copy:before {
+  content: "\e9b3";
+}
+.icon-stack:before {
+  content: "\e9b4";
+}
+.icon-folder:before {
+  content: "\e9b5";
+}
+.icon-folder-open:before {
+  content: "\e9b6";
+}
+.icon-barcode:before {
+  content: "\e9b7";
+}
+.icon-qrcode:before {
+  content: "\e9b8";
+}
+.icon-display:before {
+  content: "\e9b9";
+}
+.icon-laptop:before {
+  content: "\e9ba";
+}
+.icon-mobile:before {
+  content: "\e9bb";
+}
+.icon-mobile2:before {
+  content: "\e9bd";
+}
+.icon-tablet:before {
+  content: "\e9be";
+}
+.icon-tv:before {
+  content: "\e9bf";
+}
+.icon-bookmark:before {
+  content: "\e9d2";
+}
+.icon-embed:before {
+  content: "\ea7f";
+}
+.icon-embed2:before {
+  content: "\ea80";
+}
+.icon-instagram:before {
+  content: "\ea92";
+}
+.icon-whatsapp:before {
+  content: "\ea93";
+}
+.icon-telegram:before {
+  content: "\ea95";
+}
+.icon-twitter:before {
+  content: "\ea96";
+}
+.icon-twitch:before {
+  content: "\ea9f";
+}
+.icon-github:before {
+  content: "\eab0";
+}
+.icon-appleinc:before {
+  content: "\eabe";
+}
+.icon-android:before {
+  content: "\eac0";
+}
+.icon-windows:before {
+  content: "\eac1";
+}
+.icon-windows8:before {
+  content: "\eac2";
+}
+.icon-linkedin:before {
+  content: "\eac9";
+}
+.icon-linkedin2:before {
+  content: "\eaca";
+}
+.icon-stumbleupon2:before {
+  content: "\eacf";
+}
+.icon-stackoverflow:before {
+  content: "\ead0";
+}
+.icon-pinterest:before {
+  content: "\ead1";
+}
+.icon-pinterest2:before {
+  content: "\ead2";
+}
+.icon-IE:before {
+  content: "\eadb";
+}
+.icon-edge:before {
+  content: "\eadc";
+}
+.icon-safari:before {
+  content: "\eadd";
+}
+.icon-opera:before {
+  content: "\eade";
+}
+.icon-file-pdf:before {
+  content: "\eadf";
+}
+.icon-html-five:before {
+  content: "\eae4";
+}
+.icon-html-five2:before {
+  content: "\eae5";
+}
+.icon-css3:before {
+  content: "\eae6";
+}
+.icon-svg:before {
+  content: "\eae9";
+}
+
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+
+/* Document
+   ========================================================================== */
+
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+
+*, 
+*::after, 
+*::before {
+  box-sizing: border-box;
+}
+
+html {
+  line-height: 1.15;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  font-size: 8px!important;
+}
+
+/* Sections
+   ========================================================================== */
+
+/**
+ * Remove the margin in all browsers.
+ */
+
+body {
+  margin: 0;
+}
+
+/**
+ * Render the `main` element consistently in IE.
+ */
+
+main {
+  display: block;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping content
+   ========================================================================== */
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/* Text-level semantics
+   ========================================================================== */
+
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+
+a {
+  background-color: transparent;
+  text-decoration: none;
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  text-decoration: underline dotted;
+  /* 2 */
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+   ========================================================================== */
+
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+
+img {
+  border-style: none;
+}
+
+/* Forms
+   ========================================================================== */
+
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+
+button,
+input {
+  /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Correct the padding in Firefox.
+ */
+
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+
+legend {
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+
+/* Interactive
+   ========================================================================== */
+
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+
+details {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+
+summary {
+  display: list-item;
+}
+
+/* Misc
+   ========================================================================== */
+
+/**
+ * Add the correct display in IE 10+.
+ */
+
+template {
+  display: none;
+}
+
+/**
+ * Add the correct display in IE 10.
+ */
+
+[hidden] {
+  display: none;
+}
+
+ul, figure {
+  padding: 0;
+  margin: 0;
+}
