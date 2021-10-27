@@ -1,0 +1,7 @@
+.fa-upload{
+    cursor: pointer;
+}
+input[type='file']+img {
+    max-width: 200px;
+    max-height: 200px;
+}

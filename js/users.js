@@ -1,15 +1,10 @@
-
 let users = getLsUsers();
 
 showUsers();
-    
-
-
 function showUsers() {
     let usersListEl = document.getElementById('users__list');
     let newUser = "";
     users.forEach((user,index) => {
-
         newUser += `
             <tr id="user__tr">
             <td>${index+1}</td>
@@ -28,6 +23,8 @@ function showUsers() {
 
                 <button onclick="changePass(${user.id})" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
                          class="user__key "  title="Change Password"><i class="fas fa-key"></i></button>  
+
+                <button onclick="window.location.href='../image.html?id=${user.id}'" class="user__image"><i class="fas fa-image"></i></button> 
 
                 <button class="deleteBtn user__trash" id="user__trash" data-bs-toggle="modal" 
                         data-bs-target="#staticBackdrop2" onclick="setDeleteId(${user.id})" 
@@ -75,7 +72,7 @@ document.getElementById("changePass").onclick = function() {
                 users[user].password= pass;
                 setUsers(users);
                 document.getElementById("errorChangePass").innerHTML = "";
-                document.getElementById("successChangePass").innerHTML = "Successfuly changed";
+                document.getElementById("successChangePass").innerHTML = "Successfully changed";
                 setTimeout(()=>window.location.href = "./Login.html", 1200)
 
         }else {
