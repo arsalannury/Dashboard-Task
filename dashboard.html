@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fa">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,42 +13,43 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <title>Dashboard</title>
 </head>
+
 <body>
-    
-        <nav class="navbar">
-          <div class="userinformation">
+
+    <nav class="navbar padded">
+        <div class="userinformation">
             <i class="fas fa-user-circle user-icon" id="user-icon-id"></i>
-              <span class="user-name">User Name</span>
-              <div class="items-navbar animated pulse">
-                  <span class="change-password">Change Password</span>
-                  <span class="user-profile">Profile</span>
-                  <span class="sign-out">Sign Out</span>
-              </div>
-          </div>
-        </nav>
-    
-    <aside class="sidebar">
-        <div class="img-sidebar">
-      <img class="image-section" src="./image/dashboard.svg" alt="logo-dash">
+            <span class="user-name">User Name</span>
+            <div class="items-navbar animated pulse">
+                <span class="change-password">Change Password</span>
+                <span class="user-profile">Profile</span>
+                <span class="sign-out">Sign Out</span>
+            </div>
         </div>
-      <!-- <h2 class="title-dashboard">Dashboard</h2> -->
-      <div class="dashboard-section">
-          <ul class="item-parent-sidebar">
-             <li class="manager-item" id="manager-id">manager section </li>
-          </ul>
-                  <ul class="items-child-sidebar animated rubberBand">
-                      <li id="userlist" class="item-child">Users List</li>
-                      <li id="adduser" class="item-child">Add User</li>
-                      <li class="item-child"
-                      onclick="window.location.href='./Roles.html'"
-                      >Role List</li>
-                  </ul>
-      </div>
-    </aside>
-    <div class="content">
-     <img class="content-img" src="./image/image_processing20211021-11399-1urvylb.png" alt="content-logo">
-    </div>
+    </nav>
+    <main class="main_content">
+        <aside class="sidebar">
+            <div class="img-sidebar">
+                <img class="image-section" src="./image/dashboard.svg" alt="logo-dash">
+            </div>
+            <!-- <h2 class="title-dashboard">Dashboard</h2> -->
+            <div class="dashboard-section">
+                <ul class="item-parent-sidebar">
+                    <li class="manager-item" id="manager-id">manager section </li>
+                </ul>
+                <ul class="items-child-sidebar animated rubberBand">
+                    <li id="userlist" class="item-child">Users List</li>
+                    <li id="adduser" class="item-child">Add User</li>
+                    <li class="item-child" onclick="window.location.href='./Roles.html'">Role List</li>
+                </ul>
+            </div>
+        </aside>
+        <div class="content">
+            <img class="content-img" src="./image/image_processing20211021-11399-1urvylb.png" alt="content-logo">
+        </div>
+    </main>
     <script src="./js/login.js"></script>
     <script src="./js/dashboard.js"></script>
 </body>
+
 </html>
