@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="./css/dashboard.css">
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.6/animate.min.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="fonticons/style.css" >
     <title>Dashboard</title>
 </head>
 
@@ -18,26 +19,22 @@
 
     <nav class="navbar padded">
         <div class="userinformation">
-            <div class="user user-icon" id="navigation_dropdownActive">
+            <div class="user user-icon" id="">
                 <span class="icon-Icon-Action-Profile-Off user_icon"></span>
                 <span class="user-name">User Name</span>
-                <!-- <i class="fas fa-user-circle "></i> -->
-                <!-- <span class="user_name">User Name</span> -->
             </div>
 
-            <!-- <div class="items-navbar animated pulse">
-                <span class="change-password">Change Password</span>
-                <span class="user-profile">Profile</span>
-                <span class="sign-out">Sign Out</span>
-            </div> -->
-            <div class="items-navbar pulse">
+
+            <div class="items-navbar pulse" data-active="hide">
                 <div class="dropdown_inner">
                     <span class="dropdown-item user-profile">Profile</span>
                     <span class="dropdown-item change-password">Change Password</span>
                     <span class="dropdown-item sign-out">Sign Out</span>
                 </div>
             </div>
+
         </div>
+
     </nav>
     <main class="main_content">
         <aside class="sidebar">
