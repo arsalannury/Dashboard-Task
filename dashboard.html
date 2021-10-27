@@ -18,15 +18,24 @@
 
     <nav class="navbar padded">
         <div class="userinformation">
-            <div class="user">
+            <div class="user user-icon" id="user-icon-id">
                 <span class="icon-Icon-Action-Profile-Off user_icon" id="user-icon-id"></span>
-                <span class="user_name">User Name</span>
+                <span class="user-name">User Name</span>
+                <!-- <i class="fas fa-user-circle "></i> -->
+                <!-- <span class="user_name">User Name</span> -->
             </div>
 
-            <div class="items-navbar animated pulse">
+            <!-- <div class="items-navbar animated pulse">
                 <span class="change-password">Change Password</span>
                 <span class="user-profile">Profile</span>
                 <span class="sign-out">Sign Out</span>
+            </div> -->
+            <div class="items-navbar pulse">
+                <div class="dropdown_inner">
+                    <span class="dropdown-item user-profile">Profile</span>
+                    <span class="dropdown-item change-password">Change Password</span>
+                    <span class="dropdown-item sign-out">Sign Out</span>
+                </div>
             </div>
         </div>
     </nav>
