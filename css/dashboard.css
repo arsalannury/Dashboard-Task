@@ -105,13 +105,29 @@
     }
     
     .userinformation .items-navbar {
-        display: none;
+        display: flex;
         position: absolute;
         top: 130%;
         flex-flow: column nowrap;
         z-index: 999;
+        transition: all .1s linear 0s;
+        -webkit-transition: all .1s linear 0s;
+        -moz-transition: all .1s linear 0s;
+        -ms-transition: all .1s linear 0s;
+        -o-transition: all .1s linear 0s;
+}
+
+    .items-navbar.navbar_dropdownHide {
+        z-index: -999;
+        opacity: 0;
+        margin-top: 1rem;
     }
-    
+
+    .items-navbar.navbar_dropdownActive {
+        opacity: 1;
+        margin-top: 0;
+    }
+
     .items-navbar::before {
         content: '';
         position: absolute;

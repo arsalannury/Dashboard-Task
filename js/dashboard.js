@@ -11,13 +11,19 @@ const userName = document.querySelector('.user-name');
 //  navbar menu JS
 // :: :: :: :: :: :: :: ::
 userIcon.addEventListener('click',(e) => {
-    
-   if(userIcon.id === 'user-icon-id'){
-       itemsNavbar.style.display = 'flex';
-       userIcon.id = 'user-icon-hide';
-   }else if(userIcon.id === 'user-icon-hide'){
-       itemsNavbar.style.display = 'none';
-       userIcon.id = 'user-icon-id';
+
+    if(userIcon.id === 'navigation_dropdownActive'){
+
+        itemsNavbar.classList.remove('navbar_dropdownHide');
+        itemsNavbar.classList.add('navbar_dropdownActive');
+        userIcon.id = 'navigaiton_dropdown_hide';
+
+    }else if(userIcon.id === 'navigaiton_dropdown_hide'){
+
+        itemsNavbar.classList.remove('navbar_dropdownActive');
+        itemsNavbar.classList.add('navbar_dropdownHide');
+        userIcon.id = 'navigation_dropdownActive';
+        
    }
 
 })
