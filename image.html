@@ -4,7 +4,6 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="./assets/css/uploadImage.css">
 		<!-- CDN Fontawesome 5.15 -->
 		<link
 			rel="stylesheet"
@@ -19,13 +18,14 @@
 			integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
 			crossorigin="anonymous"
 		/>
-		<!-- CDN Bootstrap 5 -->
+		<!-- CDN Bootstrap 5
 		<script
 			defer
 			src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
 			integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
 			crossorigin="anonymous"
-		></script>
+		></script> -->
+		<link rel="stylesheet" href="./assets/css/uploadImage.css">
 		<script defer src="./js/global.js"></script>
 		<script defer src="./assets/js/uploadImage.js"></script>
 		<title>User documents</title>
@@ -34,27 +34,27 @@
 		<div class="container">
 			<div class="row my-3">
 				<div class="col-12 text-center"><h1>Upload Image</h1></div>
-				<div class="col-12"><button id="add" class="btn btn-primary">upload</button></div>
+				<div class="col-12"><button id="add" class="btn btn-success">upload</button></div>
 			</div>
 			<form class="row text-center mt-3" action="" enctype="multipart/form-data" method="post">
 				<div class="col-6 my-5 mr-2">
+					<label for="formFile_0" class="fa-2x"><i class="fas fa-upload"></i></label>
+					<input type="file" id="formFile_0" accept="image/*" hidden />
+					<img />
+				</div>
+				<div class="col-6 my-5">
 					<label for="formFile_1" class="fa-2x"><i class="fas fa-upload"></i></label>
 					<input type="file" id="formFile_1" accept="image/*" hidden />
 					<img />
 				</div>
-				<div class="col-6 my-5">
+				<div class="col-6 my-5 mr-2">
 					<label for="formFile_2" class="fa-2x"><i class="fas fa-upload"></i></label>
 					<input type="file" id="formFile_2" accept="image/*" hidden />
 					<img />
 				</div>
-				<div class="col-6 my-5 mr-2">
+				<div class="col-6 my-5">
 					<label for="formFile_3" class="fa-2x"><i class="fas fa-upload"></i></label>
 					<input type="file" id="formFile_3" accept="image/*" hidden />
-					<img />
-				</div>
-				<div class="col-6 my-5">
-					<label for="formFile_4" class="fa-2x"><i class="fas fa-upload"></i></label>
-					<input type="file" id="formFile_4" accept="image/*" hidden />
 					<img />
 				</div>
 			</form>
