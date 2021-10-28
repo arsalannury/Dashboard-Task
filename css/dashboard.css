@@ -57,7 +57,11 @@
         margin-bottom: 1rem;
         box-shadow: 0 8px 5px #0001;
         padding-top: 1rem;
-        padding-bottom: 1rem;
+        padding-bottom: 2rem;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-end;
+        border-bottom: 1px solid #0002;
     }
     
     .userinformation {
@@ -66,16 +70,16 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        width: 10%;
+        /* width: 10%; */
     }
     
     .userinformation .user {
         display: flex;
         flex-flow: row nowrap;
         align-items: flex-end;
-        border: 1px solid #0005;
-        color: #000b;
-        padding: 1rem;
+        border: 1px solid #0003;
+        color: #0009;
+        padding:1rem;
         border-radius: .5rem;
         -webkit-border-radius: .5rem;
         -moz-border-radius: .5rem;
@@ -89,6 +93,7 @@
         display: block;
         margin-top: -1rem;
         margin-right: .5rem;
+        font-weight: normal;
     }
     
     .userinformation .user-name {
@@ -99,6 +104,13 @@
         text-transform: lowercase;
     }
     
+    .userinformation .user-name::after {
+        content: '\e9b1';
+        font-family: 'icomoon';
+        font-size: var(--size-10);
+        margin-left: .5rem;
+    }
+
     .userinformation .user-name::selection {
         background-color: transparent;
         color: unset;
@@ -108,6 +120,7 @@
         display: flex;
         position: absolute;
         top: 130%;
+        right: 0;
         flex-flow: column nowrap;
         z-index: 999;
         opacity: 0;
@@ -131,7 +144,7 @@
         background-color: inherit;
         border: inherit;
         top: 0;
-        left: 10%;
+        right: 15%;
         transform: translate(0, -50%) rotate(45deg);
         -webkit-transform: translate(0, -50%) rotate(45deg);
         -moz-transform: translate(0, -50%) rotate(45deg);
