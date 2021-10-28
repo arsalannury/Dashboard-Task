@@ -4,7 +4,7 @@ const sidebarMenu = document.querySelector('.items-child-sidebar');
 const managerItem = document.querySelector('.manager-item');
 const signOut = document.querySelector('.sign-out');
 const addUser = document.getElementById('adduser');
-const usersList = document.getElementById('userlist');
+const usersListBtn = document.getElementById('userlist');
 const userName = document.querySelector('.user-name');
 
 // :: :: :: :: :: :: :: ::
@@ -16,12 +16,12 @@ userIcon.addEventListener('click',(e) => {
 
         dropdown.classList.add('navbar_dropdownActive');
         dropdown.dataset.active = 'active';
-        console.log(dropdown)
+
     }else {
         
         dropdown.classList.remove('navbar_dropdownActive');
         dropdown.dataset.active = 'hide';
-        console.log(dropdown)
+
   
     }
 })
@@ -57,7 +57,7 @@ addUser.addEventListener('click',(e) => {
 // :: :: :: :: :: :: :: ::
 //  go to users page
 // :: :: :: :: :: :: :: ::
-usersList.addEventListener('click' , (e) => {
+usersListBtn.addEventListener('click' , (e) => {
     setTimeout(() => {location.href = './Users.html' },1000)
 })
 
@@ -67,4 +67,56 @@ function i(){
     let local = localStorage.getItem('userName');
     userName.innerText = JSON.parse(local)
 }
-i()
+i();
+
+
+// :: :: :: :: :: :: :: ::
+//  change password modal
+// :: :: :: :: :: :: :: ::
+const modalEl = document.querySelector('.changePasswordModal');
+const changePassBtn = document.querySelector('#changePassBtn');
+changePassBtn.addEventListener('click', () => {
+    modalEl.classList.add('modalActive');
+});
+
+// :: :: :: :: :: :: :: ::
+// cancel change password modal
+// :: :: :: :: :: :: :: ::
+const cancelChangePass = document.querySelector('#modal_changePasswordCancel');
+cancelChangePass.addEventListener('click', () => {
+    modalEl.classList.remove('modalActive');
+}); 
+
+
+// :: :: :: :: :: :: :: ::
+// confirm change password modal
+// :: :: :: :: :: :: :: ::
+const confirmChangePass = document.querySelector('#modal_changePasswordConfirm');
+const newPass = document.querySelector('#newPass');
+const repeatPass = document.querySelector('#repeatPass');
+const logedInUserName = document.querySelector('.user-name').textContent.trim();
+
+confirmChangePass.addEventListener('click', () => {
+    if (newPass.value === repeatPass.value) {
+
+        let userIndex = usersList.findIndex(item => item.username.toLocaleLowerCase() === logedInUserName.toLocaleLowerCase());
+        if (userIndex >= 0) {
+            //update pass
+            usersList[userIndex].password = newPass.value;
+            setUsers(usersList);
+            
+            //alert txt
+            document.querySelector('.modal_alertTxt').textContent = 'password Changed!';
+            document.querySelector('.modal_alertTxt').classList.add('modal_alertSuccess');
+            
+            //go to login page
+            setTimeout(() => {
+                window.location.href = 'login.html';
+            }, 1000);
+
+        }
+
+    }else {
+        document.querySelector('.modal_alertTxt').classList.add('modal_alertTxtActive');
+    }
+}); 

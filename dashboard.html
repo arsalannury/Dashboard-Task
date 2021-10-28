@@ -17,26 +17,58 @@
 </head>
 
 <body>
+    
+    <!-- header Nav -->
+    <header>
+        <nav class="navbar padded">
+            <div class="userinformation">
+                <div class="user user-icon" id="">
+                    <span class="icon-Icon-Action-Profile-Off user_icon"></span>
+                    <span class="user-name">User Name</span>
+                </div>
 
-    <nav class="navbar padded">
-        <div class="userinformation">
-            <div class="user user-icon" id="">
-                <span class="icon-Icon-Action-Profile-Off user_icon"></span>
-                <span class="user-name">User Name</span>
-            </div>
 
-
-            <div class="items-navbar pulse" data-active="hide">
-                <div class="dropdown_inner">
-                    <span class="dropdown-item user-profile">Profile</span>
-                    <span class="dropdown-item change-password">Change Password</span>
-                    <span class="dropdown-item sign-out">Sign Out</span>
+                <div class="items-navbar pulse" data-active="hide">
+                    <div class="dropdown_inner">
+                        <span class="dropdown-item user-profile">Profile</span>
+                        <span class="dropdown-item change-password" id="changePassBtn">Change Password</span>
+                        <span class="dropdown-item sign-out">Sign Out</span>
+                    </div>
                 </div>
             </div>
+            
+            <!-- change Password modal -->
+            <div class="changePasswordModal ">
+                <aside class="changePasswordModal_inner">
+                    <header class="changePasswordModal_header padded">
+                        <h3 class="changePasswordModal_title">Change Password</h3>
+                    </header>
+                    <section class="changePasswordModal_body">
 
-        </div>
-
-    </nav>
+                        <p class="modal_textContent">enter new password to change your account password:</p>
+                        <div class="changePasswordModal_labels">
+                            <label class="changePasswordLabel" style="" for="">
+                                <input class="changePasswordInput" id="newPass" type="text" value="" required>
+                                <span class="changePasswordTag">new password</span>
+                            </label>
+                            <label class="changePasswordLabel" style="margin-bottom: 1rem;" for="">
+                                <input class="changePasswordInput" id="repeatPass" type="text" value="" required>
+                                <span class="changePasswordTag">repeat new password</span>
+                            </label>
+                        </div>
+                        <small class="modal_alertTxt">The new password and its repetition are different!</small>
+                    </section>
+                    <div class="changePasswordModal_btnsWrapper">
+                        <button class="changePasswordModal_btn" id="modal_changePasswordCancel">cancle</button>
+                        <button class="changePasswordModal_btn" id="modal_changePasswordConfirm">confirm</button>
+                    </div>
+                </aside>
+            </div>
+            
+        </nav>
+    </header>
+    
+    <!-- Main -->
     <main class="main_content">
         <aside class="sidebar">
             <div class="img-sidebar">
@@ -57,6 +89,8 @@
             <img class="content-img" src="./image/image_processing20211021-11399-1urvylb.png" alt="content-logo">
         </div>
     </main>
+
+    <script src="./js/global.js"></script>
     <script src="./js/login.js"></script>
     <script src="./js/dashboard.js"></script>
 </body>
