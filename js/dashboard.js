@@ -16,12 +16,12 @@ userIcon.addEventListener('click',(e) => {
 
         dropdown.classList.add('navbar_dropdownActive');
         dropdown.dataset.active = 'active';
-        console.log(dropdown)
+
     }else {
         
         dropdown.classList.remove('navbar_dropdownActive');
         dropdown.dataset.active = 'hide';
-        console.log(dropdown)
+
   
     }
 })
@@ -67,4 +67,33 @@ function i(){
     let local = localStorage.getItem('userName');
     userName.innerText = JSON.parse(local)
 }
-i()
+i();
+
+
+// :: :: :: :: :: :: :: ::
+//  change password modal
+// :: :: :: :: :: :: :: ::
+const modalEl = document.querySelector('.changePasswordModal');
+const changePassBtn = document.querySelector('#changePassBtn');
+changePassBtn.addEventListener('click', () => {
+    modalEl.classList.add('modalActive');
+});
+
+// cancel change password modal
+const cancelChangePass = document.querySelector('#modal_changePasswordCancel');
+cancelChangePass.addEventListener('click', () => {
+    modalEl.classList.remove('modalActive');
+}); 
+
+// confirm change password modal
+const confirmChangePass = document.querySelector('#modal_changePasswordConfirm');
+const newPass = document.querySelector('#newPass');
+const repeatPass = document.querySelector('#repeatPass');
+
+confirmChangePass.addEventListener('click', () => {
+    if (newPass.value === repeatPass.value) {
+
+    }else {
+        document.querySelector('.modal_alertTxt').classList.add('modal_alertTxtActive')
+    }
+}); 
