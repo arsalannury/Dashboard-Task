@@ -313,6 +313,7 @@
         -moz-transition: top .1s linear 0s, left .1s linear 0s;
         -ms-transition: top .1s linear 0s, left .1s linear 0s;
         -o-transition: top .1s linear 0s, left .1s linear 0s;
+        pointer-events: none;
     }
     .changePasswordInput {
         display: block;
