@@ -396,6 +396,7 @@
     }
     .customModal_inner.profileModal__inner {
         max-width: 650px;
+        margin-top: 2rem!important;
     }
 
     .profileModal__inner .customModal_body {
