@@ -10,6 +10,10 @@ function getLsUsers() {
     return usersList;
 }
 
+function getLoggedInUser() {
+    let username = localStorage.getItem("userName");
+    return  (username && JSON.parse(username)) || null;
+}
 function setUsers(users) {
     localStorage.setItem("New List", JSON.stringify(users));
 }
