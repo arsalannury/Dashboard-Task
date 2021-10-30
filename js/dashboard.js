@@ -4,22 +4,26 @@ const sidebarMenu = document.querySelector('.items-child-sidebar');
 const managerItem = document.querySelector('.manager-item');
 const signOut = document.querySelector('.sign-out');
 const addUser = document.getElementById('adduser');
-const usersList = document.getElementById('userlist');
+const usersListBtn = document.getElementById('userlist');
 const userName = document.querySelector('.user-name');
 
 // :: :: :: :: :: :: :: ::
 //  navbar menu JS
 // :: :: :: :: :: :: :: ::
 userIcon.addEventListener('click',(e) => {
-    
-   if(userIcon.id === 'user-icon-id'){
-       itemsNavbar.style.display = 'flex';
-       userIcon.id = 'user-icon-hide';
-   }else if(userIcon.id === 'user-icon-hide'){
-       itemsNavbar.style.display = 'none';
-       userIcon.id = 'user-icon-id';
-   }
+    let dropdown = document.querySelector('.items-navbar');
+    if (dropdown.dataset.active === 'hide') {
 
+        dropdown.classList.add('navbar_dropdownActive');
+        dropdown.dataset.active = 'active';
+
+    }else {
+        
+        dropdown.classList.remove('navbar_dropdownActive');
+        dropdown.dataset.active = 'hide';
+
+  
+    }
 })
 // :: :: :: :: :: :: :: ::
 //  side bar drop down JS
@@ -53,7 +57,7 @@ addUser.addEventListener('click',(e) => {
 // :: :: :: :: :: :: :: ::
 //  go to users page
 // :: :: :: :: :: :: :: ::
-usersList.addEventListener('click' , (e) => {
+usersListBtn.addEventListener('click' , (e) => {
     setTimeout(() => {location.href = './Users.html' },1000)
 })
 
@@ -63,4 +67,81 @@ function i(){
     let local = localStorage.getItem('userName');
     userName.innerText = JSON.parse(local)
 }
-i()
+i();
+
+
+// :: :: :: :: :: :: :: ::
+//  change password modal
+// :: :: :: :: :: :: :: ::
+const changePassModal = document.querySelector('#changePassModal');
+const changePassBtn = document.querySelector('#changePassBtn');
+
+changePassBtn.addEventListener('click', () => {
+    changePassModal.classList.add('modalActive');
+});
+
+
+
+// :: :: :: :: :: :: :: ::
+// cancel change password modal
+// :: :: :: :: :: :: :: ::
+const cancelChangePass = document.querySelector('#modal_changePasswordCancel');
+cancelChangePass.addEventListener('click', () => {
+    changePassModal.classList.remove('modalActive');
+});
+
+// :: :: :: :: :: :: :: ::
+// confirm change password modal
+// :: :: :: :: :: :: :: ::
+const confirmChangePass = document.querySelector('#modal_changePasswordConfirm');
+const newPass = document.querySelector('#newPass');
+const repeatPass = document.querySelector('#repeatPass');
+const logedInUserName = document.querySelector('.user-name').textContent.trim();
+
+confirmChangePass.addEventListener('click', () => {
+    if (newPass.value === repeatPass.value) {
+
+        let userIndex = usersList.findIndex(item => item.username.toLocaleLowerCase() === logedInUserName.toLocaleLowerCase());
+        if (userIndex >= 0) {
+            //update pass
+            usersList[userIndex].password = newPass.value;
+            setUsers(usersList);
+            
+            //alert txt
+            document.querySelector('.modal_alertTxt').textContent = 'password Changed!';
+            document.querySelector('.modal_alertTxt').classList.add('modal_alertSuccess');
+            
+            //go to login page
+            setTimeout(() => {
+                window.location.href = 'login.html';
+            }, 1000);
+
+        }
+
+    }else {
+        document.querySelector('.modal_alertTxt').classList.add('modal_alertTxtActive');
+    }
+});
+
+function profileDialog() {
+    const confirmProfile = document.querySelector('#modal_profileConfirm');
+    const profileModal = document.querySelector('#profileModal');
+    const profileBtn = document.querySelector('#profileBtn');
+
+    profileBtn.addEventListener('click', () => {
+        profileModal.classList.add('modalActive');
+    });
+    confirmProfile.addEventListener('click', () => {
+        profileModal.classList.remove('modalActive');
+    });
+    let loggedInUser = usersList.find(user => user.username.toLocaleLowerCase() === getLoggedInUser().toLocaleLowerCase());
+    Object.keys(loggedInUser).forEach(key => {
+        let profileInput = document.querySelector((`input[name="${key}"]`));
+        if (profileInput) {
+            profileInput.value = loggedInUser[key];
+            profileInput.disabled = true;
+        }
+    })
+}
+
+profileDialog();

@@ -32,7 +32,6 @@
             <table class="table table-striped">
                 <thead>
                     <tr>
-                        <th></th>
                         <th>row</th>
                         <th>title</th>
                         <th>actions</th>
@@ -53,14 +52,34 @@
                         <div class="col-12">
                             <div class="mb-3">
                                 <label for="roleTitle" class="form-label">Title</label>
-                                <input id="password" class="form-control" id="roleTitle">
+                                <input id="title" class="form-control" id="roleTitle">
 
                             </div>
 
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                                <button id="create__Role" data-id="" type="button"
-                                    class="btn btn-primary">Submit</button>
+                                <button id="create__role" type="button" class="btn btn-primary"  data-bs-dismiss="modal">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="role-trash" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdrop2Label" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="row p-3">
+                        <div class="col-12">
+                            <div class="modal-body">
+                                Are You sure you want to delete this role?
+                            </div>
+
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                                <button id="delete-role-modal-confirm-btn" delete-id="" type="button"
+                                    data-bs-dismiss="modal" class="btn btn-danger">Delete</button>
                             </div>
                         </div>
                     </div>
