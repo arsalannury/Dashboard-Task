@@ -31,41 +31,110 @@
 
                 <div class="items-navbar pulse" data-active="hide">
                     <div class="dropdown_inner">
-                        <span class="dropdown-item user-profile">Profile</span>
+                        <span class="dropdown-item user-profile" id="profileBtn">Profile</span>
                         <span class="dropdown-item change-password" id="changePassBtn">Change Password</span>
-                        <span class="dropdown-item sign-out">Sign Out</span>
+                        <span class="dropdown-item sign-out" >Sign Out</span>
                     </div>
                 </div>
             </div>
 
             <!-- change Password modal -->
-            <div class="changePasswordModal ">
-                <aside class="changePasswordModal_inner">
-                    <header class="changePasswordModal_header padded">
-                        <h3 class="changePasswordModal_title">Change Password</h3>
+            <div class="customModal" id="changePassModal">
+                <aside class="customModal_inner">
+                    <header class="customModal_header padded">
+                        <h3 class="customModal_title">Change Password</h3>
                     </header>
-                    <section class="changePasswordModal_body">
+                    <section class="customModal_body">
 
                         <p class="modal_textContent">enter new password to change your account password:</p>
-                        <div class="changePasswordModal_labels">
-                            <label class="changePasswordLabel" for="">
-                                <input class="changePasswordInput" id="newPass" type="text" value="" required>
-                                <span class="changePasswordTag">new password</span>
+                        <div class="customModal_labels">
+                            <label class="customModalLabel" for="">
+                                <input class="customModalInput" id="newPass" type="text" value="" required>
+                                <span class="customModalTag">new password</span>
                             </label>
-                            <label class="changePasswordLabel" style="margin-bottom: 1rem;" for="">
-                                <input class="changePasswordInput" id="repeatPass" type="text" value="" required>
-                                <span class="changePasswordTag">repeat new password</span>
+                            <label class="customModalLabel" style="margin-bottom: 1rem;" for="">
+                                <input class="customModalInput" id="repeatPass" type="text" value="" required>
+                                <span class="customModalTag">repeat new password</span>
                             </label>
                         </div>
                         <small class="modal_alertTxt">The new password and its repetition are different!</small>
                     </section>
-                    <div class="changePasswordModal_btnsWrapper">
-                        <button class="changePasswordModal_btn" id="modal_changePasswordCancel">cancle</button>
-                        <button class="changePasswordModal_btn" id="modal_changePasswordConfirm">confirm</button>
+                    <div class="customModal_btnsWrapper">
+                        <button class="customModal_btn" id="modal_changePasswordCancel">cancel</button>
+                        <button class="customModal_btn" id="modal_changePasswordConfirm">confirm</button>
                     </div>
                 </aside>
             </div>
 
+            <!-- profile modal -->
+            <div class="customModal" id="profileModal">
+                <aside class="customModal_inner profileModal__inner">
+                    <header class="customModal_header padded">
+                        <h3 class="customModal_title">profile</h3>
+                    </header>
+                        <form class="customModal_body" id="user-profile-form">
+
+
+                        <div class="customModal_labels">
+                            <label class="customModalLabel" for="">
+                                <input class="customModalInput" id="username" name="username"   type="text"  required>
+                                <span class="customModalTag">Username</span>
+                            </label>
+                        </div>
+                        <div class="customModal_labels">
+                            <label class="customModalLabel" for="">
+                                <input class="customModalInput" name="firstname"   type="text"  required>
+                                <span class="customModalTag">FirstName</span>
+                            </label>
+                        </div>
+                        <div class="customModal_labels">
+                            <label class="customModalLabel" for="">
+                                <input class="customModalInput" name="lastname"   type="text"  required>
+                                <span class="customModalTag">LastName</span>
+                            </label>
+                        </div>
+                        <div class="customModal_labels">
+                            <label class="customModalLabel" for="">
+                                <input class="customModalInput" name="nationalcode"   type="text"  required>
+                                <span class="customModalTag">NationalCode</span>
+                            </label>
+                        </div>
+                        <div class="customModal_labels">
+                            <label class="customModalLabel" for="">
+                                <input class="customModalInput" name="birthdate"   type="date"  required>
+                                <span class="customModalTag">BirthDate</span>
+                            </label>
+                        </div>
+                        <div class="customModal_labels">
+                            <label class="customModalLabel" for="">
+                                <input class="customModalInput" name="city"   type="text"  required>
+                                <span class="customModalTag">City</span>
+                            </label>
+                        </div>
+                        <div class="customModal_labels">
+                            <label class="customModalLabel" for="">
+                                <input class="customModalInput" name="mobile"   type="text"  required>
+                                <span class="customModalTag">Mobile</span>
+                            </label>
+                        </div>
+                        <div class="customModal_labels">
+                            <label class="customModalLabel" for="">
+                                <input class="customModalInput" name="address"   type="text"  required>
+                                <span class="customModalTag">Address</span>
+                            </label>
+                        </div>
+                        <div class="customModal_labels">
+                            <label class="customModalLabel" for="">
+                                <input class="customModalInput" name="role"   type="text"  required>
+                                <span class="customModalTag">Role</span>
+                            </label>
+                        </div>
+                        </form>
+                    <div class="customModal_btnsWrapper">
+                        <button class="customModal_btn" id="modal_profileConfirm">confirm</button>
+                    </div>
+                </aside>
+            </div>
         </nav>
     </header>
 

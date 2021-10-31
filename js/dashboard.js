@@ -73,20 +73,22 @@ i();
 // :: :: :: :: :: :: :: ::
 //  change password modal
 // :: :: :: :: :: :: :: ::
-const modalEl = document.querySelector('.changePasswordModal');
+const changePassModal = document.querySelector('#changePassModal');
 const changePassBtn = document.querySelector('#changePassBtn');
+
 changePassBtn.addEventListener('click', () => {
-    modalEl.classList.add('modalActive');
+    changePassModal.classList.add('modalActive');
 });
+
+
 
 // :: :: :: :: :: :: :: ::
 // cancel change password modal
 // :: :: :: :: :: :: :: ::
 const cancelChangePass = document.querySelector('#modal_changePasswordCancel');
 cancelChangePass.addEventListener('click', () => {
-    modalEl.classList.remove('modalActive');
-}); 
-
+    changePassModal.classList.remove('modalActive');
+});
 
 // :: :: :: :: :: :: :: ::
 // confirm change password modal
@@ -119,4 +121,27 @@ confirmChangePass.addEventListener('click', () => {
     }else {
         document.querySelector('.modal_alertTxt').classList.add('modal_alertTxtActive');
     }
-}); 
+});
+
+function profileDialog() {
+    const confirmProfile = document.querySelector('#modal_profileConfirm');
+    const profileModal = document.querySelector('#profileModal');
+    const profileBtn = document.querySelector('#profileBtn');
+
+    profileBtn.addEventListener('click', () => {
+        profileModal.classList.add('modalActive');
+    });
+    confirmProfile.addEventListener('click', () => {
+        profileModal.classList.remove('modalActive');
+    });
+    let loggedInUser = usersList.find(user => user.username.toLocaleLowerCase() === getLoggedInUser().toLocaleLowerCase());
+    Object.keys(loggedInUser).forEach(key => {
+        let profileInput = document.querySelector((`input[name="${key}"]`));
+        if (profileInput) {
+            profileInput.value = loggedInUser[key];
+            profileInput.disabled = true;
+        }
+    })
+}
+
+profileDialog();

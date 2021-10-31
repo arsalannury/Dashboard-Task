@@ -142,26 +142,24 @@ th{
 }
 .user__trash,
 .user__edit,
+.user__image,
 .user__key{
-    font-size: 1.2rem;
-}
-
-.deleteBtn{
     border: none;
-    color: red;
-    background-color:transparent ;
+    font-size: 1.2rem;
     margin-left: 0.5rem;
+    background-color:transparent ;
+}
+.deleteBtn{
+    color: rgb(233, 101, 101);
 }
 .user__edit{
-    border: none;
-    color: rgb(0, 156, 21);
-    background-color:transparent ;
+    color: rgb(111, 162, 238);
 }
 .user__key{
-    border: none;
-    color: rgb(255, 196, 0);
-    background-color:transparent ;
-    margin-left: 0.5rem;
+    color: rgb(247, 141, 21);
+}
+.user__image{
+    color: rgb(55, 170, 99);
 }
 
 

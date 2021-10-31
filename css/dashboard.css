@@ -202,7 +202,7 @@
     }
     /* Nav => change password Modal :::::::::::::::::::::::::: */
 
-    .changePasswordModal {
+    .customModal {
         position: fixed;
         display: flex;
         flex-flow: row nowrap;
@@ -224,14 +224,14 @@
         -o-transition: opacity .2s linear 0s;
         backdrop-filter: blur(5px);
     }
-    .changePasswordModal.modalActive {
+    .customModal.modalActive {
         z-index: 999;
         opacity: 1;
         clip: unset;
         pointer-events: all;
     }
     
-    .changePasswordModal_inner {
+    .customModal_inner {
         /* background-color: #fff; */
         background-color: #e9e9e9;
         border-radius: 1rem;
@@ -249,23 +249,23 @@
         -o-transition: margin .2s linear 0s;
         overflow: hidden;
     }
-    
-    .changePasswordModal.modalActive .changePasswordModal_inner {
+
+    .customModal.modalActive .customModal_inner {
         margin-top: 20vh;
     }
 
-    .changePasswordModal_header {
+    .customModal_header {
         padding-top: 1.5rem;
         padding-bottom: 1.5rem;
         /* background-color: #e9e9e9; */
         /* border-bottom: 1px solid #0003; */
     }
 
-    .changePasswordModal_title {
+    .customModal_title {
         color: #000b;
         text-transform: capitalize;
     }
-    .changePasswordModal_body {
+    .customModal_body {
         background-color: #fff;
         border-radius: 2rem 2rem 0 0;
         -webkit-border-radius: 2rem 2rem 0 0;
@@ -275,6 +275,7 @@
         border: 1px solid #0003;
         padding: 1px;
     }
+
     .modal_textContent {
         font-size: var(--size-13);
         padding: 1rem 2rem;
@@ -287,16 +288,18 @@
         font-size: 2rem;
         margin-right: .5rem;
     }
-    .changePasswordModal_labels {
+    .customModal_labels {
         padding: 0 2rem;
     }
-    .changePasswordLabel {
+
+    .customModalLabel {
         display: block;
         margin: 5rem 0; 
         /* border: 1px solid red; */
         position: relative;
     }
-    .changePasswordTag {
+
+    .customModalTag {
         font-size: var(--size-11);
         font-weight: bold;
         color: #0008;
@@ -315,7 +318,7 @@
         -o-transition: top .1s linear 0s, left .1s linear 0s;
         pointer-events: none;
     }
-    .changePasswordInput {
+    .customModalInput {
         display: block;
         width: 100%;
         outline: none;
@@ -334,21 +337,21 @@
         -ms-transition: box-shadow .2s linear 0s;
         -o-transition: box-shadow .2s linear 0s;
 }
-    .changePasswordInput:focus {
+    .customModalInput:focus {
         box-shadow: 0 0 0 .3rem #3982ef80;
     }
-    .changePasswordInput:focus + .changePasswordTag, 
-    .changePasswordInput:valid + .changePasswordTag {
+    .customModalInput:focus + .customModalTag,
+    .customModalInput:valid + .customModalTag {
         top: -1.5rem;
         left: 0;
     }
-    .changePasswordModal_btnsWrapper {
+    .customModal_btnsWrapper {
         padding: 1rem 2rem;
         display: flex;
         flex-flow: row nowrap;
         justify-content: flex-end;
     }
-    .changePasswordModal_btn {
+    .customModal_btn {
         cursor: pointer;
         outline: none;
         border: none;
@@ -391,6 +394,35 @@
         opacity: 1;
         color: green;
     }
+    .customModal_inner.profileModal__inner {
+        max-width: 650px;
+        margin-top: 2rem!important;
+    }
+
+    .profileModal__inner .customModal_body {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        flex-flow: wrap;
+    }
+    .profileModal__inner .customModal_labels {
+        width: 50%;
+    }
+    .profileModal__inner .customModalLabel {
+        margin: 3rem 0;
+    }
+    .profileModal__inner  input[type=date]:required:invalid::-webkit-datetime-edit {
+        color: transparent;
+    }
+    .profileModal__inner  input[type=date]:focus::-webkit-datetime-edit {
+        color: black !important;
+    }
+
+    .profileModal__inner .customModalTag {
+        top: -1.5rem;
+        left: 0;
+    }
+
     /* main content section :::::::::::::::::::::::::::::::::: */
     
     .main_content {

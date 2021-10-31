@@ -14,55 +14,52 @@ const addUserBtn = document.getElementById('add__User');
 const cancelBtn = document.getElementById('box__cancel');
 const contDropDownRole = document.querySelector('.container_dropdown');
 
-let users = getLsUsers();;
+let users = getLsUsers()
 
-function addUsers() {
-    const exists = users.findIndex( u => u.username === inputUser.value);
-    if(exists === -1){
-        if(pass.value === cPass.value){
-            document.getElementById('successful').style.display="block";
-            let user = {
-                id: Math.floor(Math.random()*10000000000),
-                username: inputUser.value,
-                firstname: firstName.value,
-                lastname: lastName.value,
-                nationalcode: nationalCode.value,
-                birthdate: birthDate.value,
-                city: city.value,
-                mobile: mobile.value,
-                address: address.value,
-                role: role.value,
-                password: pass.value
-            };
-            users.push(user);
-            document.forms[0].reset();
-            setUsers(users);
-            setTimeout(()=>window.location.href = "./Users.html", 1200)
-        }
-        else{
-            document.getElementById('confirmError').style.display="block";
-        }
+function addUsers () {
+  const exists = users.findIndex(u => u.username === inputUser.value)
+  if (exists === -1) {
+    if (pass.value === cPass.value) {
+      document.getElementById('successful').style.display = 'block'
+      let user = {
+        id: Math.floor(Math.random() * 10000000000),
+        username: inputUser.value,
+        firstname: firstName.value,
+        lastname: lastName.value,
+        nationalcode: nationalCode.value,
+        birthdate: birthDate.value,
+        city: city.value,
+        mobile: mobile.value,
+        address: address.value,
+        role: role.value,
+        password: pass.value,
+        images: {}
+      }
+      users.push(user)
+      document.forms[0].reset()
+      setUsers(users)
+      setTimeout(() => (window.location.href = './Users.html'), 1200)
+    } else {
+      document.getElementById('confirmError').style.display = 'block'
     }
-    else{
-        document.getElementById('usernameError').style.display="block";
-    }
-    
+  } else {
+    document.getElementById('usernameError').style.display = 'block'
+  }
 }
 
-formEl.addEventListener('submit' , (e) =>{
-    e.preventDefault();
-    addUsers();
-});
+formEl.addEventListener('submit', e => {
+  e.preventDefault()
+  addUsers()
+})
 
 cancelBtn.addEventListener('click', () => {
-    window.location.href = "./Users.html";  
-});
+  window.location.href = './Users.html'
+})
 
-cPass.addEventListener('keyup', ()=> 
-        document.getElementById('confirmError').style.display="none");
-
-inputUser.addEventListener('keyup', () =>
-        document.getElementById('usernameError').style.display="none");
+cPass.addEventListener(
+  'keyup',
+  () => (document.getElementById('confirmError').style.display = 'none')
+)
 
 
 
@@ -108,3 +105,7 @@ role.addEventListener('click',(e) => {
       }
 
 })
+inputUser.addEventListener(
+  'keyup',
+  () => (document.getElementById('usernameError').style.display = 'none')
+)
