@@ -12,6 +12,7 @@ const pass = document.getElementById('box__pass');
 const cPass = document.getElementById('box__cPass');
 const addUserBtn = document.getElementById('add__User');
 const cancelBtn = document.getElementById('box__cancel');
+const contDropDownRole = document.querySelector('.container_dropdown');
 
 let users = getLsUsers();;
 
@@ -63,3 +64,47 @@ cPass.addEventListener('keyup', ()=>
 inputUser.addEventListener('keyup', () =>
         document.getElementById('usernameError').style.display="none");
 
+
+
+// drop down for roles //
+ 
+window.addEventListener('load',(e) => {
+    
+    const getRolesItems = JSON.parse(localStorage.getItem('roles'));
+    const rolesItem = getRolesItems;
+
+    rolesItem.forEach(element => {
+
+        let dynamicId = Math.floor(Math.random() * 10000)
+        const roleShow = document.createElement('div');
+        roleShow.className = 'role_item_dropdown';
+        roleShow.id = dynamicId ;
+        contDropDownRole.appendChild(roleShow); 
+        roleShow.innerHTML +=  element.title
+
+    })
+
+})
+// set input role value //
+contDropDownRole.addEventListener('click',(e) => {
+
+    if(e.target.className !== 'role_item_dropdown') return;
+     const children = contDropDownRole.children;
+
+     Array.from(children).forEach((element,i) => {
+      role.value = e.target.innerText
+     })
+     
+})
+// show dropDown & hide dropDown //
+role.addEventListener('click',(e) => {
+    
+      if(role.attributes.itemid.value === 'active'){
+        contDropDownRole.style.display = 'unset';
+        role.attributes.itemid.value = 'hide'
+      }else if(role.attributes.itemid.value === 'hide'){
+        contDropDownRole.style.display = 'none';
+        role.attributes.itemid.value = 'active'
+      }
+
+})

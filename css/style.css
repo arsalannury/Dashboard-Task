@@ -9,6 +9,7 @@ body{
     background-color: #feffff;
     font-family: 'Poppins' , sans-serif;
     overflow-x: hidden;
+    position: relative;
 }
 :root{
     --primary-color: #eaeaea;
@@ -162,3 +163,27 @@ th{
     background-color:transparent ;
     margin-left: 0.5rem;
 }
+
+
+.container_dropdown{
+    display: none;
+    position: absolute;
+    width: 280px;
+    background-color: #fff;
+    top: 71.2%;
+    left: 28%;
+    border-radius:3px;
+    box-shadow: 0 0 10px #000;
+    z-index: 1;
+}
+.role_item_dropdown {
+    padding: 5px;
+    cursor: pointer;
+    transition:all .7s ease ;
+    color: var(--secondary-color);
+}
+.role_item_dropdown:hover{
+    background-color: var(--secondary-color);
+    color: #fff;
+}
+

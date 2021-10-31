@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>AddUser</title>
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.6/animate.min.css" />
     <link rel="stylesheet" href="./css/bootstrap-5.0.2-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/fontawesome-free-5.15.4-web/css/fontawesome.min.css">
     <link rel="stylesheet" href="./css/style.css">
@@ -50,7 +51,7 @@
                 
                 <div class="col-12">
                     <label for="box__role" class="form-label">Role</label>
-                    <input type="text" class="form-control w-50" id="box__role" value="" placeholder="role" required>
+                    <input type="text" itemid="active" class="form-control w-50" id="box__role" value="" placeholder="role" required readonly>
                 </div>
 
                 <div class="col-md-6">
@@ -83,6 +84,12 @@
               </form>
         </div>
     </div>
+     
+
+       <div class="container_dropdown animated pulse">
+
+       </div>
+    
 
     <script src="./js/global.js"></script>
     <script src="./js/addUser.js"></script>
