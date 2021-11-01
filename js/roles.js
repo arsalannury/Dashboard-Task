@@ -15,7 +15,7 @@ function loadRolesList() {
         var eachRowNode = document.createElement("Tr");
         eachRowNode.classList.add('each-row');
         eachRowNode.dataset.id = role.id;
-
+        localStorage.setItem('id',role.id)
         eachRowNode.innerHTML = `
 
         <td>${index + 1}</td>

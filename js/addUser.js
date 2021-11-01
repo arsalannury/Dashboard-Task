@@ -16,14 +16,14 @@ const contDropDownRole = document.querySelector('.container_dropdown');
 var index = 0;
 let users = getLsUsers()
 
-function addUsers () {
+function addUsers (id) {
   const exists = users.findIndex(u => u.username === inputUser.value)
   if (exists === -1) {
     if (pass.value === cPass.value) {
       document.getElementById('successful').style.display = 'block'
       let user = {
         // id: Math.floor(Math.random() * 10000000000),
-        // id : ,
+        id : id,
         username: inputUser.value,
         firstname: firstName.value,
         lastname: lastName.value,
@@ -48,10 +48,7 @@ function addUsers () {
   }
 }
 
-formEl.addEventListener('submit', e => {
-  e.preventDefault()
-  addUsers()
-})
+
 
 cancelBtn.addEventListener('click', () => {
   window.location.href = './Users.html'
@@ -79,17 +76,19 @@ window.addEventListener('load',(e) => {
         contDropDownRole.appendChild(roleShow); 
         roleShow.innerHTML +=  element.title;
         roleShow.id += element.id; // set id in role page to id item in drop down
-        
+       
     })
 
 })
+let inf = [];
+;
 // set input role value //
 contDropDownRole.addEventListener('click',(e) => {
 
     if(e.target.className !== 'role_item_dropdown') return;
-     const children = contDropDownRole.children;
+     const children = contDropDownRole.children;    
       role.value = e.target.innerText;
-    
+           
 })
 // show dropDown & hide dropDown //
 role.addEventListener('click',(e) => {
@@ -107,3 +106,8 @@ inputUser.addEventListener(
   'keyup',
   () => (document.getElementById('usernameError').style.display = 'none')
 )
+
+formEl.addEventListener('submit', e => {
+  e.preventDefault()
+  addUsers(localStorage.getItem('id'))
+})
