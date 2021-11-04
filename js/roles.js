@@ -1,8 +1,6 @@
-
 const createRoleBtn = document.querySelector('#create__role');
 const roletableBodyEl = document.querySelector('#roles__list');
-
-
+const usersWithSameRoleUl = document.querySelector('#users__with__same__role');
 
 var rolesList = [];
 
@@ -20,16 +18,17 @@ function loadRolesList() {
 
         <td>${index + 1}</td>
         <td>${role.title}</td>
-    
             <td>
-                <button class="role__edit t1" data-toggle="tooltip" title="Edit" 
-                    onclick="window.location.href='./Editrole.html?id=${role.id}'"><i class="fas fa-list"></i></button>
+                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#role-users-list"
+                onclick="shownUserListModal(${role.id})"
+                >
+                <i class="fas fa-list"></i>
+                </button>
     
-                <button class="deleteBtn role__trash" id="role__trash" data-bs-toggle="modal" 
+                <button class="" id="role__trash" data-bs-toggle="modal" 
                     data-bs-target="#role-trash" onclick="shownDeleteRoleModal(${role.id})"
                     data-toggle="tooltip" title="Delete"><i class="fa fa-trash"></i></button>
             </td>
-
     `;
 
         roletableBodyEl.appendChild(eachRowNode);
@@ -49,9 +48,8 @@ createRoleBtn.addEventListener('click', function (event) {
     roleRepo.createRole(roleData);
     setTimeout(() => {
         loadRolesList();
-    }, 50);});
-
-
+    }, 50);
+});
 
 function shownDeleteRoleModal(roleId) {
     document.querySelector('#delete-role-modal-confirm-btn').addEventListener('click', function () {
@@ -61,3 +59,13 @@ function shownDeleteRoleModal(roleId) {
         }, 50);
     });
 }
+
+function shownUserListModal(id) {
+    usersWithSameRoleUl.innerHTML = getLsUsers().filter(user => user.role == id).map(function (user) {
+        return (`<li class="list-group-item">${rolesList[rolesList.findIndex(role => role.id == id)].title}</li>`)
+    }
+    ).join("")
+}
+
+
+

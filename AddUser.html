@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>AddUser</title>
@@ -9,49 +10,55 @@
     <link rel="stylesheet" href="./css/style.css">
 
 </head>
+
 <body>
-    
+
     <div class="d-flex justify-content-center align-items-center container">
         <div id="box__body" class="py-4 px-4 my-5">
             <h2 class="header mb-4 text-center">Add User</h2>
             <form class="row g-3" id="box__form">
                 <div class="col-12">
                     <label for="box__username" class="form-label">Username</label>
-                <input type="text" class="form-control" id="box__username" value="" placeholder="username" required>
+                    <input type="text" class="form-control" id="box__username" value="" placeholder="username" required>
                 </div>
                 <div class="col-md-6">
                     <label for="box__firstname" class="form-label">FirstName</label>
-                    <input type="text" class="form-control" id="box__firstname" value="" placeholder="first name" required>
+                    <input type="text" class="form-control" id="box__firstname" value="" placeholder="first name"
+                        required>
                 </div>
                 <div class="col-md-6">
                     <label for="box__lastname" class="form-label">LastName</label>
-                    <input type="text" class="form-control" id="box__lastname" value=""  placeholder="last name" required>
+                    <input type="text" class="form-control" id="box__lastname" value="" placeholder="last name"
+                        required>
                 </div>
                 <div class="col-md-6">
                     <label for="box__nationalcode" class="form-label">NationalCode</label>
-                    <input type="text" class="form-control" id="box__nationalcode" value="" placeholder="national code" required>
+                    <input type="text" class="form-control" id="box__nationalcode" value="" placeholder="national code"
+                        required>
                 </div>
                 <div class="col-md-6">
                     <label for="box__birthdate" class="form-label">BirthDate</label>
-                    <input type="date" class="form-control" id="box__birthdate" value="" placeholder="birthdate" required>
+                    <input type="date" class="form-control" id="box__birthdate" value="" placeholder="birthdate"
+                        required>
                 </div>
-                
+
                 <div class="col-md-6">
                     <label for="box__city" class="form-label">City</label>
                     <input type="text" class="form-control" id="box__city" value="" placeholder="city" required>
                 </div>
                 <div class="col-md-6">
                     <label for="box__mobile" class="form-label">Mobile</label>
-                <input type="text" class="form-control" id="box__mobile" value="" placeholder="mobile" required>
+                    <input type="text" class="form-control" id="box__mobile" value="" placeholder="mobile" required>
                 </div>
                 <div class="col-12">
                     <label for="box__address" class="form-label ">Address</label>
                     <input type="text" class="form-control" id="box__address" value="" placeholder="address" required>
                 </div>
-                
+
                 <div class="col-12">
                     <label for="box__role" class="form-label">Role</label>
-                    <input type="text" itemid="active" class="form-control w-50" id="box__role" value="" placeholder="role" required readonly>
+                    <select class="form-select" aria-label="Default select example" id="box__role">
+                    </select>
                 </div>
 
                 <div class="col-md-6">
@@ -60,8 +67,9 @@
                 </div>
                 <div class="col-md-6">
                     <label for="box__cPass" class="form-label">Confirm password</label>
-                    <input type="password" class="form-control" id="box__cPass" value="" placeholder="confirm password" required>
-                    
+                    <input type="password" class="form-control" id="box__cPass" value="" placeholder="confirm password"
+                        required>
+
                 </div>
                 <div class="col-12 text-center">
                     <div id="confirmError" class="invalid-feedback">
@@ -74,26 +82,22 @@
                         Added successfuly.
                     </div>
                 </div>
-                
+
                 <div class="col-md-6 cancel">
-                    <button type="button" class="btn p-2 mt-4" id="box__cancel" >Cancel</button>
+                    <button type="button" class="btn p-2 mt-4" id="box__cancel">Cancel</button>
                 </div>
                 <div class="col-md-6">
-                    <button type="submit" class="btn p-2 mt-4" id="box__btn" data-bs-toggle="modal" data-bs-target="#modal" >Submit</button>
+                    <button type="submit" class="btn p-2 mt-4" id="box__btn" data-bs-toggle="modal"
+                        data-bs-target="#modal">Submit</button>
                 </div>
-              </form>
+            </form>
         </div>
     </div>
-     
-
-       <div class="container_dropdown animated pulse">
-
-       </div>
-    
 
     <script src="./js/global.js"></script>
     <script src="./js/addUser.js"></script>
     <script src="./js/bootstrap-js/bootstrap.min.js"></script>
     <script src="./js/fontawesome-js/all.min.js"></script>
 </body>
+
 </html>

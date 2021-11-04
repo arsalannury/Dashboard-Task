@@ -12,18 +12,16 @@ const pass = document.getElementById('box__pass');
 const cPass = document.getElementById('box__cPass');
 const addUserBtn = document.getElementById('add__User');
 const cancelBtn = document.getElementById('box__cancel');
-const contDropDownRole = document.querySelector('.container_dropdown');
-var index = 0;
 let users = getLsUsers()
+let roles = roleRepo.getRoles();
 
-function addUsers (id) {
+function addUser() {
   const exists = users.findIndex(u => u.username === inputUser.value)
   if (exists === -1) {
     if (pass.value === cPass.value) {
       document.getElementById('successful').style.display = 'block'
       let user = {
-        // id: Math.floor(Math.random() * 10000000000),
-        id : id,
+        id: Math.floor(Math.random() * 10000000000),
         username: inputUser.value,
         firstname: firstName.value,
         lastname: lastName.value,
@@ -48,7 +46,10 @@ function addUsers (id) {
   }
 }
 
-
+formEl.addEventListener('submit', e => {
+  e.preventDefault()
+  addUser()
+})
 
 cancelBtn.addEventListener('click', () => {
   window.location.href = './Users.html'
@@ -59,55 +60,14 @@ cPass.addEventListener(
   () => (document.getElementById('confirmError').style.display = 'none')
 )
 
-
-
-// drop down for roles //
-window.addEventListener('load',(e) => {
-    
-    const getRolesItems = JSON.parse(localStorage.getItem('roles'));
-    const rolesItem = getRolesItems;
-    
-    rolesItem.forEach(element => {
-
-        // let dynamicId = Math.floor(Math.random() * 10000)
-        const roleShow = document.createElement('div');
-        roleShow.className = 'role_item_dropdown';
-        // roleShow.id = dynamicId ;
-        contDropDownRole.appendChild(roleShow); 
-        roleShow.innerHTML +=  element.title;
-        roleShow.id += element.id; // set id in role page to id item in drop down
-       
-    })
-
+// items for option tag in choose role //
+window.addEventListener('load', (e) => {
+  roles.forEach(item => {
+    role.innerHTML += `<option value="${item.id}">${item.title}</option>`
+  })
 })
-let inf = [];
-;
-// set input role value //
-contDropDownRole.addEventListener('click',(e) => {
 
-    if(e.target.className !== 'role_item_dropdown') return;
-     const children = contDropDownRole.children;    
-      role.value = e.target.innerText;
-           
-})
-// show dropDown & hide dropDown //
-role.addEventListener('click',(e) => {
-    
-      if(role.attributes.itemid.value === 'active'){
-        contDropDownRole.style.display = 'unset';
-        role.attributes.itemid.value = 'hide'
-      }else if(role.attributes.itemid.value === 'hide'){
-        contDropDownRole.style.display = 'none';
-        role.attributes.itemid.value = 'active'
-      }
-
-})
 inputUser.addEventListener(
   'keyup',
   () => (document.getElementById('usernameError').style.display = 'none')
 )
-
-formEl.addEventListener('submit', e => {
-  e.preventDefault()
-  addUsers(localStorage.getItem('id'))
-})
