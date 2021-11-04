@@ -16,7 +16,7 @@ const cancelBtn = document.getElementById('box__cancel');
 let users = getLsUsers()
 let roles = roleRepo.getRoles();
 
-function addUsers() {
+function addUser() {
   const exists = users.findIndex(u => u.username === inputUser.value)
   if (exists === -1) {
     if (pass.value === cPass.value) {
@@ -49,7 +49,7 @@ function addUsers() {
 
 formEl.addEventListener('submit', e => {
   e.preventDefault()
-  addUsers()
+  addUser()
 })
 
 cancelBtn.addEventListener('click', () => {
