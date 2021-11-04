@@ -13,58 +13,70 @@ const cancelBtn = document.getElementById('box__cancel');
 
 let users = getLsUsers();
 let url = new URL(window.location.href);
-let search_params = url.searchParams; 
+let search_params = url.searchParams;
 const id = parseFloat(search_params.get('id'));
+let roles = roleRepo.getRoles();
+
 
 loadUserOnTheForm(id)
 
-function loadUserOnTheForm(uId){
-    const userIndex = users.findIndex( u => u.id === uId);
+// items for option tag in choose role //
+window.addEventListener('load', (e) => {
+    roles.forEach(item => {
+        role.innerHTML += `<option value="${item.id}"
+         ${users[users.findIndex(user => user.id == id)].role == item.id && "selected"}
+         >
+         ${item.title}
+         </option>`
+    })
+})
 
-    inputUser.value= users[userIndex].username;
-    firstName.value= users[userIndex].firstname;
-    lastName.value= users[userIndex].lastname ;
-    nationalCode.value= users[userIndex].nationalcode;
-    birthDate.value= users[userIndex].birthdate;
-    city.value= users[userIndex].city;
-    mobile.value= users[userIndex].mobile;
-    address.value= users[userIndex].address;
-    role.value= users[userIndex].role;
-
+function loadUserOnTheForm(userId) {
+    const currentUser = users[users.findIndex(user => user.id == userId)]
+    inputUser.value = currentUser.username;
+    firstName.value = currentUser.firstname;
+    lastName.value = currentUser.lastname;
+    nationalCode.value = currentUser.nationalcode;
+    birthDate.value = currentUser.birthdate;
+    city.value = currentUser.city;
+    mobile.value = currentUser.mobile;
+    address.value = currentUser.address;
+    role.value = currentUser.role;
 }
 
-function editUser(uId){
-    const exists = users.findIndex( u => u.username === inputUser.value);
-    const userIndex = users.findIndex( u => u.id ===uId);
-    if(exists === -1 || exists === userIndex){
-        document.getElementById('successful').style.display="block";
-        users[userIndex].username= inputUser.value;
-        users[userIndex].firstname= firstName.value;
-        users[userIndex].lastname= lastName.value;
-        users[userIndex].nationalcode= nationalCode.value;
-        users[userIndex].birthdate= birthDate.value;
-        users[userIndex].city= city.value;
-        users[userIndex].mobile= mobile.value;
-        users[userIndex].address= address.value;
-        users[userIndex].role= role.value;
+function editUser(userId) {
+    const exists = users.findIndex(u => u.username === inputUser.value);
+    const userIndex = users.findIndex(u => u.id === userId);
+    if (exists === -1 || exists === userIndex) {
+        document.getElementById('successful').style.display = "block";
+        currentUser.username = inputUser.value;
+        currentUser.firstname = firstName.value;
+        currentUser.lastname = lastName.value;
+        currentUser.nationalcode = nationalCode.value;
+        currentUser.birthdate = birthDate.value;
+        currentUser.city = city.value;
+        currentUser.mobile = mobile.value;
+        currentUser.address = address.value;
 
         setUsers(users);
-        setTimeout(()=>window.location.href = "./Users.html", 1200)
+        setTimeout(() => window.location.href = "./Users.html", 1200)
     }
-    else{
-        document.getElementById('usernameError').style.display="block";
+    else {
+        document.getElementById('usernameError').style.display = "block";
     }
-    
+
 }
 
-formEl.addEventListener('submit' , (e) =>{
+
+
+formEl.addEventListener('submit', (e) => {
     e.preventDefault();
     editUser(id);
 });
 
 cancelBtn.addEventListener('click', () => {
-    window.location.href = "./Users.html";  
+    window.location.href = "./Users.html";
 });
 
 inputUser.addEventListener('keyup', () =>
-        document.getElementById('usernameError').style.display="none");
+    document.getElementById('usernameError').style.display = "none");
