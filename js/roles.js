@@ -62,7 +62,7 @@ function shownDeleteRoleModal(roleId) {
 
 function shownUserListModal(id) {
     usersWithSameRoleUl.innerHTML = getLsUsers().filter(user => user.role == id).map(function (user) {
-        return (`<li class="list-group-item">${user.role}</li>`)
+        return (`<li class="list-group-item">${rolesList[rolesList.findIndex(role => role.id == id)].title}</li>`)
     }
     ).join("")
 }
